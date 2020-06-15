@@ -1,0 +1,28 @@
+.main-nav{
+    background: transparent;
+    /*background: grey;*/
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 30px 10px;
+}
+.main-nav .navbar-brand{
+    margin-right: 50px;
+    margin-left: -15px;
+    font-size: 30px;
+}
+
+.main-nav .nav-link{
+    color: white;
+    margin:0 10px;
+}
+.main-nav .nav-link:hover{
+    color: #9e9e9e;
+}
+.main-nav .navbar-toggler{
+    border-color: white;
+    float: right;
+}
+.main-nav .navbar-toggler-icon{
+    background-color: white;
+}
