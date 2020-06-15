@@ -9,6 +9,7 @@ import { FlightsComponent } from './flights/flights.component';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { HolidaysComponent } from './holidays/holidays.component';
 import { PromotionsComponent } from './promotions/promotions.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,11 @@ import { PromotionsComponent } from './promotions/promotions.component';
     HolidaysComponent,
     PromotionsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

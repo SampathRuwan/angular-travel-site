@@ -21,7 +21,7 @@
                                                 <span class="input-group-text" id="inputGroupPrepend1">
                                             <i class="fa fa-home"></i></span>
                                             </div>
-                                            <select class="form-control select-arrow-1">
+                                            <select class="form-control select-arrow-1" (change)="selectedDestination($event)">
                                                 <option selected>ALBERGO AL SOLE, Italy</option>
                                             </select>
                                         </div>
@@ -32,13 +32,14 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" id="inputGroupPrepend2"><i class="fa fa-suitcase"></i></span>
                                             </div>
-                                            <input style="-webkit-appearance: none" type="date" class="form-control" value="2020-03-11"
+                                            <input style="-webkit-appearance: none" type="date" [(ngModel)]="departureDate" name="departureDate" class="form-control" value="2020-03-11"
                                                    aria-describedby="inputGroupPrepend1" >
                                         </div>
+
                                     </div>
                                     <div class="col-md-2 col-sm-2 col-xs-12 border-left">
                                         <label for="validationCustom01">Return</label>
-                                        <input type="date" class="form-control" id="validationCustom01" value="2020-03-11" placeholder="2020-03-11">
+                                        <input type="date" class="form-control" id="validationCustom01" [(ngModel)]="returnDate" name="returnDate"  value="2020-03-11" placeholder="2020-03-11">
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-12 border-left">
                                         <label>Guests</label>
@@ -47,7 +48,7 @@
                                                 <span class="input-group-text" id="inputGroupPrepend3">
                                             <i class="fa fa-user"></i></span>
                                             </div>
-                                            <select class="form-control select-arrow-2">
+                                            <select class="form-control select-arrow-2" (change)="numberOfGuests($event)">
                                                 <option selected>2 Adults</option>
                                             </select>
                                         </div>
@@ -56,7 +57,7 @@
                             </form>
                         </div>
                         <div class="col-md-2 col-sm-2 col-xs-12">
-                            <button class="btn btn-style-3">Search</button>
+                            <button type="button" (click)="searchResults()" class="btn btn-style-3">Search</button>
                         </div>
                     </div>
                 </div>
